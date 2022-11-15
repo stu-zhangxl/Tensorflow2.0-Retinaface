@@ -5,13 +5,14 @@ from retinaface import Retinaface
 import tensorflow as tf
 import cv2
 
-gpus = tf.config.experimental.list_physical_devices(device_type='GPU')
-for gpu in gpus:
-    tf.config.experimental.set_memory_growth(gpu, True)
+# gpus = tf.config.experimental.list_physical_devices(device_type='GPU')
+# for gpu in gpus:
+#     tf.config.experimental.set_memory_growth(gpu, True)
 
 retinaface = Retinaface()
 
 while True:
+    # 输入图片的路径
     img = input('Input image filename:')
 
     image = cv2.imread(img)
