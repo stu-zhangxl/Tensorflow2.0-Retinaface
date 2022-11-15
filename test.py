@@ -13,7 +13,8 @@ if __name__ == '__main__':
     # print('Load weights {}.'.format(model_path))
     # model.load_weights(model_path, by_name=True, skip_mismatch=True)
     img = 'img/timg.jpg'
-    image = cv2.imread(img)
+    image = cv2.imread(img) 
+    # 如果在网络中限制了输入图片的shape, 那么图片就需要进行如下resize处理
     # image = cv2.resize(image,(224, 224))
     image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
     r_image = model.detect_image(image)
